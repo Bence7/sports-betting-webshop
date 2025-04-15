@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/sports-betting-webshop/browser",
+    "public": "public/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
