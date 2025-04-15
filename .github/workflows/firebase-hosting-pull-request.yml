@@ -12,10 +12,14 @@ jobs:
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
     steps:
+      # Step 1
+      - uses: actions/checkout@v4
+
+      # Step 2
       - name: Copy environment file
         run: cp src/environments/environment.example.ts src/environments/environment.ts
 
-      - uses: actions/checkout@v4
+      # Step 3
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
