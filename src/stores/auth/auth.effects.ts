@@ -37,7 +37,7 @@ export const navigateAfterSignIn$ = createEffect(
     actions$.pipe(
       ofType(AuthActions.signInSuccess),
       tap(() => {
-        router.navigate([AppRouteSegment.ADMIN]);
+        router.navigate([AppRouteSegment.LANDING]);
       })
     ),
   { functional: true, dispatch: false }

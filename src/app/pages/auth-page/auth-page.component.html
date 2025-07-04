@@ -3,3 +3,18 @@
   <input [formControl]="loginForm.controls.password" type="password" />
   <button (click)="submitLogin()">Submit</button>
 </form>
+
+<form [formGroup]="registerForm">
+  <input [formControl]="registerForm.controls.email" type="email" />
+  <input [formControl]="registerForm.controls.password" />
+  <button (click)="submitRegistration()">Submit</button>
+</form>
+
+@if (registerForm.invalid) {
+<div>anyad</div>
+}
+
+<form [formGroup]="passwordResetForm">
+  <input [formControl]="passwordResetForm.controls.email" type="email" />
+  <button (click)="sendPasswordReset()">Submit</button>
+</form>
