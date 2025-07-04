@@ -11,8 +11,8 @@ describe('AuthService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        provideAuth(() => getAuth()),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+        provideAuth(() => getAuth()),
       ],
     });
     service = TestBed.inject(AuthService);

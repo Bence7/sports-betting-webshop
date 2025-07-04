@@ -14,8 +14,8 @@ describe('AuthPageComponent', () => {
       imports: [AuthPageComponent],
       providers: [
         provideStore(),
-        provideAuth(() => getAuth()),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+        provideAuth(() => getAuth()),
       ],
     }).compileComponents();
 
